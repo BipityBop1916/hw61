@@ -1,0 +1,68 @@
+﻿@model instagram2.Models.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2 class="mb-4">Register</h2>
+
+<form asp-action="Register" method="post" enctype="multipart/form-data" class="w-50">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Username -->
+    <div class="mb-3">
+        <label asp-for="Username" class="form-label"></label>
+        <input asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <!-- Avatar -->
+    <div class="mb-3">
+        <label asp-for="Avatar" class="form-label">Avatar</label>
+        <input asp-for="Avatar" type="file" class="form-control" />
+        <span asp-validation-for="Avatar" class="text-danger"></span>
+    </div>
+
+    <!-- Name -->
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name (optional)</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Bio -->
+    <div class="mb-3">
+        <label asp-for="Bio" class="form-label">Bio (optional)</label>
+        <textarea asp-for="Bio" class="form-control"></textarea>
+        <span asp-validation-for="Bio" class="text-danger"></span>
+    </div>
+
+    <!-- Gender -->
+    <div class="mb-3">
+        <label asp-for="Gender" class="form-label">Bio (optional)</label>
+        <input asp-for="Gender" class="form-control" />
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+
+    <!-- Phone -->
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">Phone number (optional)</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

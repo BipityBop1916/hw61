@@ -1,0 +1,26 @@
+﻿@model instagram2.Models.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2 class="mb-4">Login</h2>
+
+<form asp-action="Login" method="post" class="w-50">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Username or Email -->
+    <div class="mb-3">
+        <label asp-for="Login" class="form-label">Username or Email</label>
+        <input asp-for="Login" class="form-control" />
+        <span asp-validation-for="Login" class="text-danger"></span>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
